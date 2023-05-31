@@ -1,0 +1,11 @@
+version: 2
+edge_handlers:
+  - url_pattern: "/kitchen/"
+    script: "metadata"
+redirects:
+  - source: "/mix*"
+    destination: "/kitchen/"
+    status: 301
+  - source: "/emojikitchen/*"
+    destination: "https://www.gstatic.com/android/keyboard/emojikitchen/:splat"
+    status: 200
